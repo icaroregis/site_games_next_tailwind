@@ -1,3 +1,4 @@
+import { HomeIcon } from '@/components';
 import Image from 'next/image';
 
 export const Navbar = () => {
@@ -13,7 +14,13 @@ export const Navbar = () => {
         />
       </div>
       <ul className="flex-1 my-4 border-t border-indigo-400/20 hover:border-indigo-400/40">
-        <li className="my-2 rounded-lg bg-transparent p-2 hover:bg-slate-800 cursor-pointer">Home</li>
+        <li className="my-2 rounded-lg bg-transparent p-2 hover:bg-slate-800 cursor-pointer">
+          <HomeIcon
+            color="#F0F"
+            className="w-4 h-4"
+          />
+          Home
+        </li>
         <li className="my-2 rounded-lg bg-transparent p-2 hover:bg-slate-800 cursor-pointer">Games</li>
         <li className="my-2 rounded-lg bg-transparent p-2 hover:bg-slate-800 cursor-pointer">Top 10</li>
         <li className="my-2 rounded-lg bg-transparent p-2 hover:bg-slate-800 cursor-pointer">Walkthroughs</li>
