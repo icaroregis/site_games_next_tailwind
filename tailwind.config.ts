@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'slate-890': 'rgb(var(--color-slate-890) / <alpha-value>)',
+        'green-master': 'rgb(var(--color-green-master) / <alpha-value>)',
         // primary: '#89F064',
       },
     },

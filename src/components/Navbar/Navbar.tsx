@@ -15,7 +15,7 @@ export const Navbar = ({ className, ...props }: NavbarProps) => {
       )}>
       <div className="flex justify-center items-center">
         <Image
-          src="/1725151679480.png"
+          src="/assets/1725151679480.png"
           alt="Logo"
           className="max-w-full p-2"
           width={200}
