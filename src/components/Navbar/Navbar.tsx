@@ -10,7 +10,7 @@ export const Navbar = ({ className, ...props }: NavbarProps) => {
     <nav
       {...props}
       className={cn(
-        'flex flex-col gap-4 bg-slate-900 border-r border-indigo-400/20 hover:border-indigo-400/40 w-72 p-2 text-slate-300 h-screen',
+        'flex flex-col bg-slate-900 border-r border-indigo-400/20 hover:border-indigo-400/40 w-72 p-2 text-slate-300 h-screen',
         className,
       )}>
       <div className="flex justify-center items-center">
