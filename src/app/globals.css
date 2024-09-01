@@ -7,3 +7,13 @@
     --color-slate-890: 24 31 48;
   }
 }
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+
+  .border-teste {
+    @apply border border-solid border-black
+  }
+}

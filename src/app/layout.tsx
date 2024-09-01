@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn('flex gap-2 bg-slate-890 text-slate-300', inter.className)}>
+    <html lang="pt-br">
+      <body className={cn('bg-slate-890 text-slate-300', inter.className)}>
         <Navbar />
         {children}
       </body>
