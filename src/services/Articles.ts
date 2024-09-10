@@ -4,15 +4,10 @@ const HOME_LATEST_COUNT = 4;
 
 const ArticleService = {
   getArticles: async (page = 1, limit = 10) => {
-    //calculo do offset.
-    //Pagina for 1 => (1 - 1) * 10 = 0;
-    //Pagina for 2 => (2 - 1) * 10 = 10;
-    //Pagina for 3 => (3 - 1) * 10 = 20;
-
     const offset = (page - 1) * limit;
     const data = await Article.get({ limit, offset });
     const total = await Article.count({});
-
+    const totalPages = Math.ceil(total / limit);
     return {
       data,
       metadata: {
@@ -20,6 +15,7 @@ const ArticleService = {
         limit,
         offset,
         total,
+        totalPages,
       },
     };
   },
@@ -29,6 +25,7 @@ const ArticleService = {
     const orderBy = { publishedAt: 'desc' };
     const data = await Article.get({ orderBy, limit, offset });
     const total = await Article.count({});
+    const totalPages = Math.ceil((total - HOME_LATEST_COUNT) / limit);
 
     return {
       data,
@@ -37,6 +34,7 @@ const ArticleService = {
         limit,
         offset,
         total,
+        totalPages,
       },
     };
   },
@@ -48,7 +46,7 @@ const ArticleService = {
     const orderBy = { publishedAt: 'desc' };
     const data = await Article.get({ orderBy, limit, offset });
     const total = await Article.count({});
-
+    const totalPages = Math.ceil((total - HOME_LATEST_COUNT) / limit);
     return {
       data,
       metadata: {
@@ -56,6 +54,7 @@ const ArticleService = {
         limit,
         offset,
         total,
+        totalPages,
       },
     };
   },
